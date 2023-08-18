@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between p-24">
       <Nav />
-      <h1>Hi, I&apos;m Louis. A Web Developer</h1>
+      <h1>Hi, Im Louis. A Web Developer</h1>
       <button onClick={() => dispatch(increment())}>Increment</button>
       <button onClick={() => dispatch(decrement())}>Decrease</button>
       <button onClick={() => dispatch(reset())}>Reset</button>
