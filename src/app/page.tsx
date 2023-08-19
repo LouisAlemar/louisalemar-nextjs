@@ -1,24 +1,22 @@
 "use client";
 
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+
 import Nav from "../components/navigation";
-import { increment, decrement, reset } from "../redux/features/portfolioSlice";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../redux/store";
+import { fetchProjects } from "../redux/features/projects/projectsSlice";
+import { AppDispatch } from "../redux/store";
 
 export default function Home() {
-  const currentNumber = useSelector(
-    (state: RootState) => state.portfolio.value
-  );
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    dispatch(fetchProjects());
+  }, []);
 
   return (
     <main className="flex flex-col items-center justify-between p-24">
       <Nav />
-      <h1>Hi, Im Louis. A Web Developer</h1>
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <button onClick={() => dispatch(decrement())}>Decrease</button>
-      <button onClick={() => dispatch(reset())}>Reset</button>
-      <h1>{currentNumber}</h1>
+      <h1>Hi, Im Louis. A Software Engineer</h1>
     </main>
   );
 }

@@ -1,24 +1,28 @@
 {
   "projects": [
     {
+      "projectId": 1,
       "name": "Salesforce Stakeholder Impact Report",
       "description": "A yearly report for Stakeholders.",
       "url": "https://stakeholderimpactreport.salesforce.com/",
       "technologies": ["Javascript", "React", "Wordpress"]
     },
     {
+      "projectId": 2,
       "name": "Salesforce Marketing Automation Tour",
       "description": "A tour we created to guide the user through marketing techniques.",
       "url": "https://marketing-automation-tour.herokuapp.com/",
       "technologies": ["Javascript", "React", "Wordpress"]
     },
     {
+      "projectId": 3,
       "name": "Noddle Companies",
       "description": "The Noddle Companies is a full service strategic development partner which can provide their clients with assistance in site selection, acquisition master planning, architect and contractor selections and contract negotiation, zoning, infrastructure installation, tax incentives, construction management and more.",
       "url": "https://www.noddlecompanies.com/",
       "technologies": ["Javascript", "PHP", "Wordpress", "LESS"]
     },
     {
+      "projectId": 4,
       "name": "Iannelli Construction",
       "description": "An informational website for a construction company.",
       "url": "http://www.iannelliconstruction.com/",

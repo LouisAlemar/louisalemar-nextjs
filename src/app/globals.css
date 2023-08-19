@@ -18,6 +18,6 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: #ffffff;
   background: var(--background-color);
 }
