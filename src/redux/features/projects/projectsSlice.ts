@@ -10,34 +10,20 @@ import {
 import { RootState } from "@/redux/store";
 import { Project } from "@/app/api/interfaces/index";
 
-export interface CounterState {
-  value: number;
-}
-
-const initialState: CounterState = {
-  value: 0,
-};
-
 const loading = createAction<boolean>("loading");
 
 export const fetchProjects = createAsyncThunk(
   "projects/fetchProjects",
   async (_, { dispatch }) => {
-    const data = await fetch("/api/", {
+    await fetch("/api/", {
       method: "GET",
-    }).then((res) => res.json());
-    dispatch(setAllProjects(data.projects));
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        dispatch(setAllProjects(data.projects));
+      });
   }
 );
-
-// export const fetchProjects = createAsyncThunk(
-//   "projects/fetchProjects",
-//   async () => {
-//     return fetch("/api/", {
-//       method: "GET",
-//     });
-//   }
-// );
 
 const projectsAdapter = createEntityAdapter<Project>({
   selectId: (project) => project.projectId,
