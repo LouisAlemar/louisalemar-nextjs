@@ -45,6 +45,7 @@ export default function Nav() {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <Link
+                        key={item.name}
                         href={item.href}
                         className={classNames(
                           item.current
