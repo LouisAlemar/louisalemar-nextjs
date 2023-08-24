@@ -3,5 +3,10 @@ export type Project = {
   name: string;
   description: string;
   url: string;
-  technologies: Array<string>;
+  technologies: string[];
+};
+
+export type Tech = {
+  type: string;
+  technology: string[];
 };

@@ -28,5 +28,35 @@
       "url": "http://www.iannelliconstruction.com/",
       "technologies": ["Javascript", "PHP", "Wordpress", "LESS"]
     }
+  ],
+  "tech": [
+    {
+      "type": "Languages",
+      "technology": ["HTML5", "CSS3", "JavaScript", "Typescript", "PHP"]
+    },
+    {
+      "type": "Front-End",
+      "technology": ["React", "Redux", "Redux-Toolkit", "jQuery", "AJAX"]
+    },
+    {
+      "type": "Back-End",
+      "technology": ["Node.js", "Express", "Sequelize"]
+    },
+    {
+      "type": "Databases",
+      "technology": ["MySQL"]
+    },
+    {
+      "type": "Styling",
+      "technology": ["SASS", "LESS", "Tailwind CSS"]
+    },
+    {
+      "type": "Tools",
+      "technology": ["Webpack", "Docker"]
+    },
+    {
+      "type": "Other",
+      "technology": ["GraphQL", "Wordpress", "Next.js"]
+    }
   ]
 }

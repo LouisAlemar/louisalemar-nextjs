@@ -1,26 +1,23 @@
 "use client";
 
 import {
-  createAction,
   createSlice,
   createEntityAdapter,
   createAsyncThunk,
 } from "@reduxjs/toolkit";
 
-import { RootState } from "@/redux/store";
+import { RootState, AppDispatch } from "@/redux/store";
 import { Project } from "@/app/api/interfaces/index";
 
-const loading = createAction<boolean>("loading");
-
-export const fetchProjects = createAsyncThunk(
-  "projects/fetchProjects",
+export const getJobs = createAsyncThunk(
+  "projects/getJobs",
   async (_, { dispatch }) => {
     await fetch("/api/", {
       method: "GET",
     })
       .then((res) => res.json())
       .then((data) => {
-        dispatch(setAllProjects(data.projects));
+        dispatch(setAllJobs(data.projects));
       });
   }
 );
@@ -31,20 +28,18 @@ const projectsAdapter = createEntityAdapter<Project>({
 
 export const projects = createSlice({
   name: "projects",
-  initialState: projectsAdapter.getInitialState({ loading: false }),
+  initialState: projectsAdapter.getInitialState(),
   reducers: {
-    setAllProjects: projectsAdapter.setAll,
-  },
-  extraReducers(builder) {
-    builder.addCase(loading, (state, action) => {
-      state.loading = true;
-    });
+    setAllJobs: projectsAdapter.setAll,
+    getEverything: () => {},
   },
 });
 
-export const projectSelectors = projectsAdapter.getSelectors(
+const projectSelectors = projectsAdapter.getSelectors(
   (state: RootState) => state.projects
 );
 
-export const { setAllProjects } = projects.actions;
+export const { selectIds, selectEntities, selectById, selectTotal, selectAll } =
+  projectSelectors;
+export const { setAllJobs, getEverything } = projects.actions;
 export default projects.reducer;

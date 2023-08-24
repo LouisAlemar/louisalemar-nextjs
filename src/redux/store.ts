@@ -2,11 +2,13 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import projectsReducer from "./features/projects/projectsSlice";
+import techReducer from "./features/tech/techSlice";
 import listenerMiddleware from "./listener";
 
 export const store = configureStore({
   reducer: {
     projects: projectsReducer,
+    tech: techReducer,
   },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware().prepend(listenerMiddleware.middleware);
