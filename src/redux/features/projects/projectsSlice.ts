@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  createAction,
   createSlice,
   createEntityAdapter,
   createAsyncThunk,
@@ -8,6 +9,14 @@ import {
 
 import { RootState, AppDispatch } from "@/redux/store";
 import { Project } from "@/app/api/interfaces/index";
+
+const projectsFetchingInProgress = createAction<boolean>(
+  "projects/getJobs/inProgress"
+);
+const projectsFetchingSuccess = createAction<boolean>(
+  "projects/getJobs/success"
+);
+const projectsFetchingError = createAction<boolean>("projects/getJobs/error");
 
 export const getJobs = createAsyncThunk(
   "projects/getJobs",
@@ -28,10 +37,26 @@ const projectsAdapter = createEntityAdapter<Project>({
 
 export const projects = createSlice({
   name: "projects",
-  initialState: projectsAdapter.getInitialState(),
+  initialState: projectsAdapter.getInitialState({
+    projectsFetchingInProgress: false,
+    projectsFetchingSuccess: false,
+    projectsFetchingError: false,
+  }),
   reducers: {
     setAllJobs: projectsAdapter.setAll,
-    getEverything: () => {},
+  },
+  extraReducers: (builder) => {
+    builder.addCase(getJobs.pending, (state, action) => {
+      state.projectsFetchingInProgress = true;
+    }),
+      builder.addCase(getJobs.fulfilled, (state, action) => {
+        state.projectsFetchingSuccess = true;
+        state.projectsFetchingInProgress = false;
+      }),
+      builder.addCase(getJobs.rejected, (state, action) => {
+        state.projectsFetchingError = true;
+        state.projectsFetchingInProgress = false;
+      });
   },
 });
 
@@ -41,5 +66,5 @@ const projectSelectors = projectsAdapter.getSelectors(
 
 export const { selectIds, selectEntities, selectById, selectTotal, selectAll } =
   projectSelectors;
-export const { setAllJobs, getEverything } = projects.actions;
+export const { setAllJobs } = projects.actions;
 export default projects.reducer;

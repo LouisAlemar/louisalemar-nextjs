@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  createAction,
   createSlice,
   createEntityAdapter,
   createAsyncThunk,
@@ -8,6 +9,10 @@ import {
 
 import { RootState, AppDispatch } from "@/redux/store";
 import { Tech } from "@/app/api/interfaces/index";
+
+const techFetchingInProgress = createAction<boolean>("tech/getTech/inProgress");
+const techFetchingSuccess = createAction<boolean>("tech/getTech/success");
+const techFetchingError = createAction<boolean>("tech/getTech/error");
 
 export const getTech = createAsyncThunk(
   "tech/getTech",
@@ -28,10 +33,13 @@ const techAdapter = createEntityAdapter<Tech>({
 
 export const tech = createSlice({
   name: "tech",
-  initialState: techAdapter.getInitialState(),
+  initialState: techAdapter.getInitialState({
+    techFetchingInProgress: true,
+    techFetchingSuccess: false,
+    techFetchingError: false,
+  }),
   reducers: {
     setAllTech: techAdapter.setAll,
-    getEverything: () => {},
   },
 });
 
@@ -41,5 +49,5 @@ const techSelectors = techAdapter.getSelectors(
 
 export const { selectIds, selectEntities, selectById, selectTotal, selectAll } =
   techSelectors;
-export const { setAllTech, getEverything } = tech.actions;
+export const { setAllTech } = tech.actions;
 export default tech.reducer;

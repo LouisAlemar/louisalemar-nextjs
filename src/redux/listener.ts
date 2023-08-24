@@ -1,15 +1,13 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 
-import {
-  getEverything,
-  getJobs,
-} from "@/redux/features/projects/projectsSlice";
+import { getPortfolioItems } from "@/redux/features/portfolio/portfolioSlice";
+import { getJobs } from "@/redux/features/projects/projectsSlice";
 import { getTech } from "@/redux/features/tech/techSlice";
 
 const listenerMiddleware = createListenerMiddleware();
 
 listenerMiddleware.startListening({
-  actionCreator: getEverything,
+  actionCreator: getPortfolioItems,
   effect: async (action, listenerApi) => {
     listenerApi.dispatch(getJobs());
     listenerApi.dispatch(getTech());

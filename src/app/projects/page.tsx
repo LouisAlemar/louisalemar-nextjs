@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import Nav from "../../components/Nav/navigation";
-import { getEverything } from "@/redux/features/projects/projectsSlice";
+import { getPortfolioItems } from "@/redux/features/portfolio/portfolioSlice";
 import {
   selectIds,
   selectEntities,
@@ -15,13 +15,15 @@ import {
 import { AppDispatch } from "../../redux/store";
 import { Project } from "@/app/api/interfaces/index";
 import ProjectComponent from "@/components/Project/project";
+import usePortfolio from "@/redux/features/portfolio/usePortfolio";
 
 export default function Home() {
   const dispatch = useDispatch<AppDispatch>();
   const allProjects: Project[] = useSelector(selectAll);
+  usePortfolio();
 
   useEffect(() => {
-    dispatch(getEverything());
+    dispatch(getPortfolioItems());
   }, []);
 
   return (
