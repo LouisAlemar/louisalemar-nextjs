@@ -17,13 +17,12 @@ const techFetchingError = createAction<boolean>("tech/getTech/error");
 export const getTech = createAsyncThunk(
   "tech/getTech",
   async (_, { dispatch }) => {
-    await fetch("/api/", {
+    const response = await fetch("/api/", {
       method: "GET",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        dispatch(setAllTech(data.tech));
-      });
+    });
+
+    const data = await response.json();
+    dispatch(setAllTech(data.tech));
   }
 );
 

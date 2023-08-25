@@ -21,13 +21,12 @@ const projectsFetchingError = createAction<boolean>("projects/getJobs/error");
 export const getJobs = createAsyncThunk(
   "projects/getJobs",
   async (_, { dispatch }) => {
-    await fetch("/api/", {
+    const response = await fetch("/api/", {
       method: "GET",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        dispatch(setAllJobs(data.projects));
-      });
+    });
+
+    const data = await response.json();
+    dispatch(setAllJobs(data.projects));
   }
 );
 
