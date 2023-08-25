@@ -2,8 +2,8 @@
 
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { motion } from "framer-motion";
 
-import Nav from "../../components/Nav/navigation";
 import { getPortfolioItems } from "@/redux/features/portfolio/portfolioSlice";
 import {
   selectIds,
@@ -27,14 +27,20 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex flex-col items-center justify-between">
-      <Nav />
-
-      {allProjects.map((project: Project) => {
-        return (
-          <ProjectComponent key={project.projectId} id={project.projectId} />
-        );
-      })}
-    </main>
+    <motion.div
+      className="text-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 3 }}
+    >
+      <main className="flex flex-col items-center justify-between">
+        {allProjects.map((project: Project) => {
+          return (
+            <ProjectComponent key={project.projectId} id={project.projectId} />
+          );
+        })}
+      </main>
+    </motion.div>
   );
 }

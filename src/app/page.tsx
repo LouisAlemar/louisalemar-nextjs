@@ -1,12 +1,18 @@
 "use client";
-
-import Nav from "../components/Nav/navigation";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between">
-      <Nav />
-      <h1>Hi, Im Louis. A Software Engineer</h1>
-    </main>
+    <motion.div
+      className="text-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 3 }}
+    >
+      <main className="flex flex-col items-center justify-between">
+        <h1>Hi, Im Louis. A Software Engineer</h1>
+      </main>
+    </motion.div>
   );
 }
