@@ -17,7 +17,7 @@ function classNames(...classes: string[]) {
 
 export default function Nav() {
   return (
-    <Disclosure as="nav" className="w-full fixed">
+    <Disclosure as="nav" className="w-full fixed bg-green">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -51,7 +51,7 @@ export default function Nav() {
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            : "text-white hover:bg-gray-700 hover:text-black",
                           "rounded-md px-3 py-2 text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
@@ -75,7 +75,7 @@ export default function Nav() {
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      : "text-white hover:bg-gray-700 hover:text-black",
                     "block rounded-md px-3 py-2 text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
