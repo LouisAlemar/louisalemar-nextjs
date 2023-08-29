@@ -11,7 +11,9 @@ export default function Home() {
       transition={{ duration: 3 }}
     >
       <main className="flex flex-col items-center justify-between">
-        <h1>Hi, Im Louis. A Software Engineer</h1>
+        <div className="h-screen flex items-center justify-items-center">
+          <h1 className="text-6xl">Hi, Im Louis. A Software Engineer</h1>
+        </div>
       </main>
     </motion.div>
   );
