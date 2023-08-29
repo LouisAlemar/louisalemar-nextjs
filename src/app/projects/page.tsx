@@ -5,13 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 
 import { getPortfolioItems } from "@/redux/features/portfolio/portfolioSlice";
-import {
-  selectIds,
-  selectEntities,
-  selectById,
-  selectTotal,
-  selectAll,
-} from "@/redux/features/projects/projectsSlice";
+import { selectAll } from "@/redux/features/projects/projectsSlice";
 import { AppDispatch } from "../../redux/store";
 import { Project } from "@/app/api/interfaces/index";
 import ProjectComponent from "@/components/Project/project";
@@ -29,17 +23,23 @@ export default function Home() {
   return (
     <motion.div
       className="text-center"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 3 }}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.8,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01]
+      }}
     >
-      <main className="flex flex-col items-center justify-between">
+      <main className="flex flex-col items-center justify-between p-10 pt-24">
+        <h1 className="text-5xl mb-9">Projects</h1>
+
         {allProjects.map((project: Project) => {
           return (
             <ProjectComponent key={project.projectId} id={project.projectId} />
           );
         })}
+
       </main>
     </motion.div>
   );
