@@ -19,6 +19,10 @@ const config: Config = {
         green: "#17C671",
         lightGray: "#F8F9FA",
       },
+      fontFamily: {
+        'roboto': ['Roboto', 'sans-serif'],
+        'roboto-condensed': ['Roboto Condensed', 'sans-serif']
+      },
     },
   },
   plugins: [],
