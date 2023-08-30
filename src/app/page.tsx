@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { BsGithub } from 'react-icons/bs';
 import { BsLinkedin } from 'react-icons/bs';
+import { FaHandPeace } from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -19,17 +20,17 @@ export default function Home() {
         <div className="h-screen flex items-center justify-content-center flex-col justify-center">
           <div className="social-icons flex justify-evenly items-center w-full">
             <a href="https://github.com/LouisAlemar/" target="_blank">
-              <BsGithub className="text-5xl text-blue" />
+              <BsGithub className="text-5xl text-blue hover:text-green" />
             </a>
             <a href="https://www.linkedin.com/in/louisalemar/" target="_blank">
-              <BsLinkedin className="text-5xl text-green" />
+              <BsLinkedin className="text-5xl text-green hover:text-blue" />
             </a>
 
 
           </div>
-          <h1 className="text-8xl text-blue font-roboto block">Hi,</h1>
-          <h1 className="text-6xl text-gray font-roboto block">I&apos;m <span className="text-green">Louis.</span></h1>
-          <h1 className="text-6xl text-gray font-roboto">A Software Engineer!</h1>
+          <h1 className="text-8xl text-blue font-roboto block">Hi,<FaHandPeace className="align-baseline inline-block text-7xl" /></h1>
+          <h1 className="text-6xl text-gray font-roboto-condensed block">I&apos;m <span className="text-green">Louis.</span></h1>
+          <h1 className="text-6xl text-gray font-roboto-condensed">A Software Engineer!</h1>
         </div>
       </main>
     </motion.div>

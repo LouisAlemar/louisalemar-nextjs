@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Image from 'next/image'
 import navbarImage from "../../images/navbar-image.jpg";
 
 const navigation = [
@@ -36,10 +37,12 @@ export default function Nav() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
+                  <Image
                     className="h-8 w-8 rounded-full"
                     src={navbarImage.src}
                     alt="Your Company"
+                    width={32}
+                    height={32}
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
