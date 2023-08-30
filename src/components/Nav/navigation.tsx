@@ -5,11 +5,11 @@ import Link from "next/link";
 import Image from 'next/image'
 import navbarImage from "../../images/navbar-image.jpg";
 
+
 const navigation = [
   { name: "Home", href: "/", current: false },
   { name: "Projects", href: "/projects", current: false },
   { name: "Resume", href: "/resume", current: false },
-  { name: "Contact", href: "/contact", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -18,7 +18,7 @@ function classNames(...classes: string[]) {
 
 export default function Nav() {
   return (
-    <Disclosure as="nav" className="w-full fixed bg-green">
+    <Disclosure as="nav" className="w-full fixed bg-green z-50">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -40,7 +40,7 @@ export default function Nav() {
                   <Image
                     className="h-8 w-8 rounded-full"
                     src={navbarImage.src}
-                    alt="Your Company"
+                    alt="Louis Alemar"
                     width={32}
                     height={32}
                     priority={true}

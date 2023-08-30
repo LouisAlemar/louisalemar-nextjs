@@ -18,7 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getPortfolioItems());
-  }, []);
+  }, [dispatch]);
 
   return (
     <motion.div
@@ -32,7 +32,7 @@ export default function Home() {
       }}
     >
       <main className="flex flex-col items-center justify-between p-10 pt-24">
-        <h1 className="text-5xl mb-9">Projects</h1>
+        <h1 className="text-3xl sm:text-4xl mb-9">Projects</h1>
 
         {allProjects.map((project: Project) => {
           return (

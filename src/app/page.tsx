@@ -25,11 +25,10 @@ export default function Home() {
             <a href="https://www.linkedin.com/in/louisalemar/" target="_blank">
               <BsLinkedin className="text-5xl text-green hover:text-blue" />
             </a>
-
-
           </div>
-          <h1 className="text-8xl text-blue font-roboto block">Hi &#123;<FaHandPeace className="align-baseline inline-block text-7xl" />&#125;</h1>
-          <h1 className="text-6xl text-gray font-roboto-condensed block">I&apos;m <span className="text-green">Louis.</span></h1>
+
+          <h1 className="text-8xl text-blue font-roboto block">Hi <FaHandPeace className="align-baseline inline-block text-7xl" /></h1>
+          <h1 className="text-6xl text-gray font-roboto-condensed block">I&apos;m <span className="text-green">&#123;Louis&#125;</span></h1>
           <h1 className="text-4xl text-gray font-roboto-condensed">A Software Engineer!</h1>
         </div>
       </main>
