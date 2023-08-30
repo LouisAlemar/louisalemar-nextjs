@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 
 import { getPortfolioItems } from "@/redux/features/portfolio/portfolioSlice";
-import { selectAll, selectById } from "@/redux/features/projects/projectsSlice";
+import { selectAll } from "@/redux/features/projects/projectsSlice";
 import { AppDispatch } from "../../redux/store";
 import { Project } from "@/app/api/interfaces/index";
 import ProjectComponent from "@/components/Project/project";
@@ -18,7 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getPortfolioItems());
-  }, [dispatch]);
+  }, []);
 
   return (
     <motion.div
