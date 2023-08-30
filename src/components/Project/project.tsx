@@ -22,8 +22,8 @@ const ProjectComponent = ({ id }: { id: number }) => {
           <div className="project-item mb-6 sm:mb-3 flex items-center w-full flex-col-reverse sm:flex-row">
             <div className="project-info sm:w-6/12 w-full sm:pr-5">
               <h1 className="text-1xl sm:text-2xl my-2 text-blue font-roboto">{project.name}</h1>
-              <p className="text-sm mb-2">{project.description}</p>
-              <button className="bg-blue hover:bg-green text-white font-bold py-2 px-4 rounded">
+              <p className="text-sm mb-2 sm:mb-5">{project.description}</p>
+              <button className="bg-blue hover:bg-green text-white font-bold py-2 px-4 rounded font-roboto-condensed">
                 <a href={project.url} target="_blank">Visit Website</a>
               </button>
             </div>
@@ -56,8 +56,8 @@ const ProjectComponent = ({ id }: { id: number }) => {
             </div>
             <div className="project-info sm:w-6/12 w-full sm:pl-5">
               <h1 className="text-1xl sm:text-2xl my-2 text-blue font-roboto">{project.name}</h1>
-              <p className="text-sm mb-2">{project.description}</p>
-              <button className="bg-blue hover:bg-green text-white font-bold py-2 px-4 rounded">
+              <p className="text-sm mb-2 sm:mb-5">{project.description}</p>
+              <button className="bg-blue hover:bg-green text-white font-bold py-2 px-4 rounded font-roboto-condensed">
                 <a href={project.url} target="_blank">Visit Website</a>
               </button>
             </div>
