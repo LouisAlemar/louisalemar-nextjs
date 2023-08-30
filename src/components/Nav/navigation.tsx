@@ -9,7 +9,7 @@ import navbarImage from "../../images/navbar-image.jpg";
 const navigation = [
   { name: "Home", href: "/", current: false },
   { name: "Projects", href: "/projects", current: false },
-  { name: "Resume", href: "/resume", current: false },
+  // { name: "Resume", href: "/resume", current: false },
 ];
 
 function classNames(...classes: string[]) {
