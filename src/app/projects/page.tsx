@@ -18,7 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getPortfolioItems());
-  }, []);
+  }, [dispatch]);
 
   return (
     <motion.div
