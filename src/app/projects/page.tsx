@@ -36,7 +36,7 @@ export default function Home() {
 
         {allProjects.map((project: Project) => {
           return (
-            <ProjectComponent key={project.projectId} id={project.projectId} />
+            <ProjectComponent id={project.projectId} />
           );
         })}
 
