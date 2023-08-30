@@ -1,5 +1,5 @@
 describe('Home', () => {
   it('true to be true', () => {
-    expect(true).toBe(true)
+    expect(false).toBe(true)
   })
 })
