@@ -43,6 +43,7 @@ export default function Nav() {
                     alt="Your Company"
                     width={32}
                     height={32}
+                    priority={true}
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
