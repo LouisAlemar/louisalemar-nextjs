@@ -23,7 +23,7 @@ const ProjectComponent = ({ id }: { id: number }) => {
             <div className="project-info sm:w-6/12 w-full sm:pr-5">
               <h1 className="text-1xl sm:text-2xl my-2 text-blue font-roboto">{project.name}</h1>
               <p className="text-sm mb-2 sm:mb-5">{project.description}</p>
-              <button className="bg-blue hover:bg-green text-white font-bold py-2 px-4 rounded font-roboto-condensed">
+              <button className="bg-blue hover:bg-green text-white font-bold py-2 px-4 rounded font-roboto-condensed transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300">
                 <a href={project.url} target="_blank">Visit Website</a>
               </button>
             </div>
@@ -57,7 +57,7 @@ const ProjectComponent = ({ id }: { id: number }) => {
             <div className="project-info sm:w-6/12 w-full sm:pl-5">
               <h1 className="text-1xl sm:text-2xl my-2 text-blue font-roboto">{project.name}</h1>
               <p className="text-sm mb-2 sm:mb-5">{project.description}</p>
-              <button className="bg-blue hover:bg-green text-white font-bold py-2 px-4 rounded font-roboto-condensed">
+              <button className="bg-blue hover:bg-green text-white font-bold py-2 px-4 rounded font-roboto-condensed transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 duration-300">
                 <a href={project.url} target="_blank">Visit Website</a>
               </button>
             </div>
