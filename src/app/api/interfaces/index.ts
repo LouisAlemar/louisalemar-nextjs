@@ -11,3 +11,7 @@ export type Tech = {
   type: string;
   technology: string[];
 };
+
+export type Skills = {
+  name: string;
+}
