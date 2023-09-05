@@ -1,16 +1,23 @@
 import * as fs from "fs";
 import * as util from "node:util";
 import * as path from "node:path";
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
 
 export async function GET(request: Request) {
-  const readFile = util.promisify(fs.readFile);
+  const posts = await prisma.post.findMany({
+    where: { published: true }
+  })
 
-  const pathToFile = path.resolve(
-    __dirname,
-    "../../../../src/app/data/projects.json"
-  );
+  // const readFile = util.promisify(fs.readFile);
 
-  const projectsData = await readFile(pathToFile, "utf8");
+  // const pathToFile = path.resolve(
+  //   __dirname,
+  //   "../../../../src/app/data/projects.json"
+  // );
 
-  return new Response(projectsData);
+  // const projectsData = await readFile(pathToFile, "utf8");
+
+  return new Response(JSON.stringify(posts));
 }
