@@ -29,7 +29,7 @@ export default function Home() {
 
           <h1 className="text-8xl text-blue font-roboto block">Hi <FaHandPeace className="align-baseline inline-block text-7xl" /></h1>
           <h1 className="text-6xl text-gray font-roboto-condensed block">I&apos;m <span className="text-green">&#123;Louis&#125;</span></h1>
-          <h1 className="text-4xl text-gray font-roboto-condensed">A Software Engineer!</h1>
+          <h1 className="text-4xl text-gray font-roboto-condensed">A Front-End Developer!</h1>
         </div>
       </main>
     </motion.div>

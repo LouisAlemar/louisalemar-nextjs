@@ -8,7 +8,7 @@ import * as path from "node:path";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Louis Alemar - Software Engineer"
+  title: "Louis Alemar - Front-End Developer"
 };
 
 export default function RootLayout({
