@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 
-import { getPortfolioItems } from "@/redux/features/portfolio/portfolioSlice";
-import { selectAll } from "@/redux/features/projects/projectsSlice";
-import { AppDispatch } from "../../redux/store";
+import { getPortfolioItems } from "@/store/features/portfolio/portfolioSlice";
+import { selectAll } from "@/store/features/projects/projectsSlice";
+import { AppDispatch } from "../../store/store";
 import { Project } from "@/app/api/interfaces/index";
-import ProjectComponent from "@/components/Project/project";
-import usePortfolio from "@/redux/features/portfolio/usePortfolio";
+import ProjectComponent from "@/components/project";
+import usePortfolio from "@/store/features/portfolio/usePortfolio";
 
 export default function Home() {
   const dispatch = useDispatch<AppDispatch>();

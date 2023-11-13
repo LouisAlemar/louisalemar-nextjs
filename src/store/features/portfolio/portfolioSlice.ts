@@ -2,7 +2,7 @@
 
 import { createSlice, createEntityAdapter } from "@reduxjs/toolkit";
 
-import { RootState, AppDispatch } from "@/redux/store";
+import { RootState, AppDispatch } from "@/store/store";
 import { Project } from "@/app/api/interfaces/index";
 
 const portfolioAdapter = createEntityAdapter<Project>({
@@ -14,7 +14,7 @@ export const portfolio = createSlice({
   initialState: portfolioAdapter.getInitialState(),
   reducers: {
     setAllJobs: portfolioAdapter.setAll,
-    getPortfolioItems: () => {},
+    getPortfolioItems: () => { },
   },
 });
 

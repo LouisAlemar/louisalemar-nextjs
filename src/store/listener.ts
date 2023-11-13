@@ -1,8 +1,8 @@
 import { createListenerMiddleware } from "@reduxjs/toolkit";
 
-import { getPortfolioItems } from "@/redux/features/portfolio/portfolioSlice";
-import { getJobs } from "@/redux/features/projects/projectsSlice";
-import { getTech } from "@/redux/features/tech/techSlice";
+import { getPortfolioItems } from "@/store/features/portfolio/portfolioSlice";
+import { getJobs } from "@/store/features/projects/projectsSlice";
+import { getTech } from "@/store/features/tech/techSlice";
 
 const listenerMiddleware = createListenerMiddleware();
 

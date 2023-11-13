@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { AppDispatch } from "@/redux/store";
+import { AppDispatch } from "@/store/store";
 import { selectAll, getTech } from "./techSlice";
 
 const useTech = () => {

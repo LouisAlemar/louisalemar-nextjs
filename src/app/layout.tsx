@@ -1,11 +1,31 @@
-import { Providers } from "@/redux/provider";
-import "./globals.css";
+import { Providers } from "@/store/provider";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
-import * as path from "node:path";
+import { Teko, Lato, Open_Sans, Merriweather } from 'next/font/google';
 
-const inter = Inter({ subsets: ["latin"] });
+const teko = Teko({
+  subsets: ['latin'],
+  weight: ['700'],
+  variable: "--font-teko"
+})
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: "--font-lato"
+})
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: "--font-openSans"
+})
+
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['700'],
+  variable: "--font-merriweather"
+})
 
 export const metadata: Metadata = {
   title: "Louis Alemar - Front-End Developer"
@@ -18,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${teko.variable} ${lato.variable} ${openSans.variable} ${merriweather.variable}`}>
         <Providers>{children}</Providers>
       </body>
     </html>

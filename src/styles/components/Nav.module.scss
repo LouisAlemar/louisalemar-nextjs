@@ -1,0 +1,25 @@
+@import "../variables.scss";
+
+.nav {
+  background-color: $purple-primary;
+  padding: 1.6rem 0;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.initials {
+  color: $offwhite;
+  font-size: 3.2rem;
+}
+
+.nav-items {
+  color: $offwhite;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+}

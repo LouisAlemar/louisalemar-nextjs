@@ -1,0 +1,89 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./variables.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 6.4rem;
+  font-family: var(--font-teko), sans-serif;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+h2 {
+  font-size: 4.8rem;
+  font-family: var(--font-teko), sans-serif;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+h3 {
+  font-size: 3.2rem;
+  font-family: var(--font-openSans), sans-serif;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-family: var(--font-teko), sans-serif;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+h5 {
+  font-size: 2.4rem;
+  font-family: var(--font-lato), sans-serif;
+  font-weight: 700;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-family: var(--font-lato), sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+p,
+ul,
+ol {
+  font-size: 1.6rem;
+  font-family: var(--font-lato), sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+span {
+  font-size: 1.4rem;
+  font-family: var(--font-merriweather), serif;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+button {
+  font-size: 1.6rem;
+  font-family: var(--font-openSans), sans-serif;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  color: $offwhite;
+}

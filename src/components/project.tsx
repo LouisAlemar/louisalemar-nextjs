@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
-import { RootState } from "@/redux/store";
+import { RootState } from "@/store/store";
 import {
   selectIds,
   selectEntities,
   selectById,
   selectTotal,
   selectAll,
-} from "@/redux/features/projects/projectsSlice";
+} from "@/store/features/projects/projectsSlice";
 
 import Image from "next/image";
 

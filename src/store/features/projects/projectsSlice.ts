@@ -7,7 +7,7 @@ import {
   createAsyncThunk,
 } from "@reduxjs/toolkit";
 
-import { RootState, AppDispatch } from "@/redux/store";
+import { RootState, AppDispatch } from "@/store/store";
 import { Project } from "@/app/api/interfaces/index";
 
 const projectsFetchingInProgress = createAction<boolean>(
