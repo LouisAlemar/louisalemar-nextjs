@@ -1,124 +1,60 @@
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from 'next/image'
-import navbarImage from "../../images/navbar-image.jpg";
+
+import logo from '../images/web-programming.png'
 
 import styles from '../styles/components/Nav.module.scss'
 import Button from "./ui/button";
-
-
-// const navigation = [
-//   { name: "Home", href: "/", current: false },
-//   { name: "Projects", href: "/projects", current: false },
-//   // { name: "Resume", href: "/resume", current: false },
-// ];
-
-// function classNames(...classes: string[]) {
-//   return classes.filter(Boolean).join(" ");
-// }
+import { useState } from "react";
 
 export default function Nav() {
+  const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
+
+  const toggleMobileMenuHandler = () => {
+    setToggleMobileMenu(!toggleMobileMenu)
+  }
+
   return (
-    <nav className={styles.nav}>
-      <div className={`container ${styles['nav-container']}`}>
-        <h1 className={styles.initials}>LA</h1>
-        <ul className={styles['nav-items']}>
-          <li>Services</li>
-          <li>About</li>
-          <li>Work</li>
-          <li>Testimonials</li>
-          <li>Contact</li>
-        </ul>
-        <Button primary={false}>Download CV</Button>
-      </div>
-    </nav>
+    <>
+      <nav className={`${styles.nav} ${styles['desktop-nav']}`}>
+        <div className={`container ${styles['nav-container']}`}>
+          <Image
+            className={styles.logo}
+            src={logo}
+            alt="Louis Alemar logo"
+            width={48}
+            height={48}
+          />
+          <ul className={`${styles['nav-items']} ${styles['desktop-nav-items']}`}>
+            <li>Services</li>
+            <li>About</li>
+            <li>Work</li>
+            <li>Testimonials</li>
+            <li>Contact</li>
+          </ul>
+          <Button isDownloadCv={true} isPrimary={false}>Download CV</Button>
+          <Button isPrimary={false} isMobileMenuToggler={true} clickFunc={toggleMobileMenuHandler} className="space-y-2">
+            <span className={`${styles['hamburger-line']} block h-2 w-10`}></span>
+            <span className={`${styles['hamburger-line']} block h-2 w-10`}></span>
+            <span className={`${styles['hamburger-line']} block h-2 w-10`}></span>
+          </Button>
+        </div>
+      </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-    // <Disclosure as="nav" className="w-full fixed bg-green z-50">
-    //   {({ open }) => (
-    //     <>
-    //       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    //         <div className="relative flex h-16 items-center justify-between">
-    //           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-    //             {/* Mobile menu button*/}
-    //             <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-    //               <span className="absolute -inset-0.5" />
-    //               <span className="sr-only">Open main menu</span>
-    //               {open ? (
-    //                 <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-    //               ) : (
-    //                 <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-    //               )}
-    //             </Disclosure.Button>
-    //           </div>
-    //           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-    //             <div className="flex flex-shrink-0 items-center">
-    //               <Image
-    //                 className="h-8 w-8 rounded-full"
-    //                 src={navbarImage.src}
-    //                 alt="Louis Alemar"
-    //                 width={32}
-    //                 height={32}
-    //                 priority={true}
-    //               />
-    //             </div>
-    //             <div className="hidden sm:ml-6 sm:block">
-    //               <div className="flex space-x-4">
-    //                 {navigation.map((item) => (
-    //                   <Link
-    //                     key={item.name}
-    //                     href={item.href}
-    //                     className={classNames(
-    //                       item.current
-    //                         ? "bg-gray-900 text-white"
-    //                         : "text-white hover:bg-gray-700 hover:text-black",
-    //                       "rounded-md px-3 py-2 text-sm font-medium"
-    //                     )}
-    //                     aria-current={item.current ? "page" : undefined}
-    //                   >
-    //                     {item.name}
-    //                   </Link>
-    //                 ))}
-    //               </div>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-
-    //       <Disclosure.Panel className="sm:hidden">
-    //         <div className="space-y-1 px-2 pb-3 pt-2">
-    //           {navigation.map((item) => (
-    //             <Disclosure.Button
-    //               key={item.name}
-    //               as="a"
-    //               href={item.href}
-    //               className={classNames(
-    //                 item.current
-    //                   ? "bg-gray-900 text-white"
-    //                   : "text-white hover:bg-gray-700 hover:text-black",
-    //                 "block rounded-md px-3 py-2 text-base font-medium"
-    //               )}
-    //               aria-current={item.current ? "page" : undefined}
-    //             >
-    //               {item.name}
-    //             </Disclosure.Button>
-    //           ))}
-    //         </div>
-    //       </Disclosure.Panel>
-    //     </>
-    //   )}
-    // </Disclosure>
+      <nav className={`${styles.nav} ${styles['mobile-nav']} ${toggleMobileMenu && styles['show-mobile-nav']}`}>
+        <div className={`container flex-col ${styles['nav-container']}`}>
+          <div>
+            <ul className={`${styles['nav-items']} ${styles['mobile-nav-items']}`}>
+              <li>Services</li>
+              <li>About</li>
+              <li>Work</li>
+              <li>Testimonials</li>
+              <li>Contact</li>
+            </ul>
+            <Button isPrimary={false}>Download CV</Button>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 }

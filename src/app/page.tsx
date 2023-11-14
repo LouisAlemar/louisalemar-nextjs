@@ -5,31 +5,16 @@ import Header from '@/components/header';
 // import { BsLinkedin } from 'react-icons/bs';
 // import { FaHandPeace } from 'react-icons/fa';
 import '../styles/global.scss';
+import Services from '@/components/services';
 
 
 
 export default function Home() {
   return (
     <main>
-      {/* <Header /> */}
-      {/* <h1>Louis Alemar</h1>
-      <h2>Louis Alemar</h2>
-      <h3>Louis Alemar</h3>
-      <h4>Louis Alemar</h4>
-      <h5>Louis Alemar</h5>
-      <h6>Louis Alemar</h6>
-      <p>Eu viverra integer dolor feugiat. In phasellus dictum cursus non. Non nibh quam a fermentum interdum. Non sed quisque magna in. Feugiat velit morbi porttitor sit enim ipsum accumsan vel felis. Volutpat et varius magnis in. Massa amet nisi vulputate nunc maecenas auctor in etiam. Nec sagittis faucibus facilisi velit vel. Aliquam sed vitae molestie velit ac enim tempor aliquam turpis. Leo ornare tellus sagittis sed at sodales tempor. Et tincidunt semper diam est viverra. Risus enim faucibus adipiscing odio at orci tellus sodales eu. Sed egestas pulvinar pretium commodo arcu in posuere quis. Pulvinar enim semper eu enim. Pulvinar risus at integer egestas elementum. Faucibus felis mauris elementum sapien purus in morbi mi tortor. Nullam mattis urna tortor dignissim tellus ultrices risus. Metus vitae adipiscing ultricies tincidunt eget ultricies amet convallis. Velit curabitur duis at lectus vitae morbi pellentesque. Elit at sit diam id urna quam ipsum augue lacus. Pretium gravida maecenas hendrerit nec nulla et mi. Mattis enim in laoreet sit. Posuere adipiscing vel integer massa.</p>
-      <ul>
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-      </ul>
-      <ol>
-        <li>test</li>
-        <li>test</li>
-        <li>test</li>
-      </ol>
-      <span>Available</span> */}
+      <Header />
+      <Services />
+
     </main>
     // <motion.div
     //   className="text-center"

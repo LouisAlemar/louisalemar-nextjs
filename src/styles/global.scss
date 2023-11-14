@@ -21,10 +21,18 @@ body {
 }
 
 h1 {
-  font-size: 6.4rem;
+  font-size: 4.8rem;
   font-family: var(--font-teko), sans-serif;
   font-weight: 700;
   line-height: 125%;
+
+  @media screen and (min-width: 768px) {
+    font-size: 5.6rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 8.8rem;
+  }
 }
 
 h2 {
@@ -32,13 +40,18 @@ h2 {
   font-family: var(--font-teko), sans-serif;
   font-weight: 700;
   line-height: 125%;
+  text-align: center;
 }
 
 h3 {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   font-family: var(--font-openSans), sans-serif;
   font-weight: 400;
   line-height: 125%;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 3.2rem;
+  }
 }
 
 h4 {
@@ -49,11 +62,20 @@ h4 {
 }
 
 h5 {
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   font-family: var(--font-lato), sans-serif;
   font-weight: 700;
   line-height: 125%;
+  letter-spacing: 0.6rem;
   text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 2.4rem;
+  }
 }
 
 h6 {
@@ -83,7 +105,16 @@ button {
   font-size: 1.6rem;
   font-family: var(--font-openSans), sans-serif;
   font-weight: 700;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 0.4rem;
   color: $offwhite;
+}
+
+.mobile-flex-col {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+  }
 }

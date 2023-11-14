@@ -7,3 +7,19 @@
 .btn-secondary {
   border: 0.2rem solid $offwhite;
 }
+
+.btn-mobile-menu-toggler {
+  display: inline-block;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.btn-desktop-cv {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+  }
+}

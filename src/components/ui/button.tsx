@@ -1,13 +1,24 @@
-import styles from '../../styles/components/ui/Button.module.scss'
+import styles from '../../styles/components/ui/Button.module.scss';
 
 interface ButtonProps {
-  primary: boolean;
-  children: string;
+  children: any;
+  isPrimary?: boolean;
+  clickFunc?: () => void;
+  isMobileMenuToggler?: boolean;
+  isDownloadCv?: boolean;
+  className?: string
 }
 
-const Button: React.FC<ButtonProps> = ({ primary = true, children }) => {
+const Button: React.FC<ButtonProps> = ({ children, isPrimary = true, clickFunc, isMobileMenuToggler = false, isDownloadCv = false, className }) => {
+  const buttonClass = `
+    ${isPrimary ? styles['btn-primary'] : styles['btn-secondary']} 
+    ${isMobileMenuToggler ? styles['btn-mobile-menu-toggler'] : ''}
+    ${isDownloadCv ? styles['btn-desktop-cv'] : ''}
+    ${className ? className : ''}
+  `;
+
   return (
-    <button className={primary ? styles['btn-primary'] : styles['btn-secondary']}>{children}</button>
+    <button className={buttonClass} onClick={clickFunc}>{children}</button>
   )
 }
 
