@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
 import Button from './ui/button'
-import Circle from './ui/circle'
 
 import HeaderImg from '../images/header-image.jpg'
 
@@ -30,10 +29,10 @@ const Header = () => {
             alt="Image of Louis Alemar"
             width={550}
             height={550}
+            priority={true}
           />
         </div>
       </div>
-      <Circle />
     </header>
   )
 }

@@ -4,12 +4,22 @@ import Header from '@/components/header';
 // import { BsGithub } from 'react-icons/bs';
 // import { BsLinkedin } from 'react-icons/bs';
 // import { FaHandPeace } from 'react-icons/fa';
+import Services from '@/components/services/services-section';
+import { fetchData } from '@/store/all-data-slice';
+import { AppDispatch } from '@/store/store';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styles/global.scss';
-import Services from '@/components/services';
 
 
 
 export default function Home() {
+  const dispatch = useDispatch<AppDispatch>();
+
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
+
   return (
     <main>
       <Header />

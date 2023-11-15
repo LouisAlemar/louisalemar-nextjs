@@ -14,7 +14,7 @@ import usePortfolio from "@/store/features/portfolio/usePortfolio";
 export default function Home() {
   const dispatch = useDispatch<AppDispatch>();
   const allProjects: Project[] = useSelector(selectAll);
-  usePortfolio();
+  // usePortfolio();
 
   useEffect(() => {
     dispatch(getPortfolioItems());

@@ -1,20 +1,12 @@
 "use client";
 
 import { configureStore } from "@reduxjs/toolkit";
-import portfolioReducer from "./features/portfolio/portfolioSlice";
-import projectsReducer from "./features/projects/projectsSlice";
-import techReducer from "./features/tech/techSlice";
-import listenerMiddleware from "./listener";
+import dataReducer from './all-data-slice';
 
 export const store = configureStore({
   reducer: {
-    portfolio: portfolioReducer,
-    projects: projectsReducer,
-    tech: techReducer,
-  },
-  middleware: (getDefaultMiddleware) => {
-    return getDefaultMiddleware().prepend(listenerMiddleware.middleware);
-  },
+    data: dataReducer,
+  }
 });
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

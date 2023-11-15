@@ -14,7 +14,7 @@ export async function GET(request: Request) {
 
   const pathToFile = path.resolve(
     __dirname,
-    "../../../../src/app/data/projects.json"
+    "../../../../src/app/data/data.json"
   );
 
   const projectsData = await readFile(pathToFile, "utf8");
