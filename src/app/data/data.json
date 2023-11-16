@@ -5,7 +5,7 @@
       {
         "serviceId": 1,
         "name": "Web Design",
-        "description": "Our web design service focuses on creating visually stunning and responsive websites, tailored to embody your brand's identity and ensure an exceptional user experience across all devices.",
+        "description": "My web design service focuses on creating visually stunning and responsive websites, tailored to embody your brand's identity and ensure an exceptional user experience across all devices.",
         "keyFeatures": [
           "<strong>Custom Visual Design:</strong><br /> Matching brand identity",
           "<strong>Responsive Layouts:</strong><br /> Adapts to all devices",
@@ -17,7 +17,7 @@
       {
         "serviceId": 2,
         "name": "Web Development",
-        "description": "We provide comprehensive web development solutions, encompassing both front-end and back-end programming, aimed at building secure, high-performing, and SEO-optimized websites.",
+        "description": "I provide comprehensive web development solutions, encompassing both front-end and back-end programming, aimed at building secure, high-performing, and SEO-optimized websites.",
         "keyFeatures": [
           "<strong>Front-End & Back-End:</strong><br /> Building and managing website functions",
           "<strong>Performance Optimization:</strong><br /> Fast loading times",
@@ -29,7 +29,7 @@
       {
         "serviceId": 3,
         "name": "Content Creation",
-        "description": "Our content creation expertise spans across crafting SEO-friendly, engaging, and diverse multimedia content, strategically designed to amplify your brand's voice and presence online.",
+        "description": "My content creation expertise spans across crafting SEO-friendly, engaging, and diverse multimedia content, strategically designed to amplify your brand's voice and presence online.",
         "keyFeatures": [
           "<strong>SEO-Friendly Writing:</strong><br /> For better online visibility",
           "<strong>Diverse Media Formats:</strong><br /> Blogs, videos, infographics",
