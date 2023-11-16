@@ -1,0 +1,43 @@
+@import "../../variables.scss";
+
+.testimonials-section {
+  background-color: $white;
+  padding: 13rem 0rem 19rem;
+  transform: translateY(-32rem);
+  z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    transform: translateY(-42rem);
+    padding-bottom: 4rem;
+  }
+
+  h2 {
+    color: $purple-primary;
+
+    &:after {
+      border-bottom: 0.4rem solid $purple-dark;
+    }
+  }
+}
+
+.testimonials-header {
+  display: flex;
+  justify-content: center;
+}
+
+.section-description {
+  max-width: 62rem;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 auto 3.2rem;
+  }
+}
+
+.testimonial-listing {
+  margin-top: 0rem;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 8rem;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../variables.scss";
+
+.about-section {
+  padding: 17.2rem 0rem;
+  background-color: $gray;
+  transform: translateY(-15rem);
+  z-index: -1;
+
+  @media screen and (min-width: 768px) {
+    transform: translateY(-27rem);
+  }
+
+  h2 {
+    color: $purple-primary;
+
+    &:after {
+      border-bottom: 0.4rem solid $purple-dark;
+    }
+  }
+}
+
+.about-header {
+  display: flex;
+  justify-content: center;
+}
+
+.about-image {
+  border: 1rem solid $purple-dark;
+  border-radius: 1rem;
+  margin-bottom: 2.4rem;
+}
+
+.about-text {
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    padding-left: 2.4rem;
+  }
+}

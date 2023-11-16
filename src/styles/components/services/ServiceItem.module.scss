@@ -1,0 +1,44 @@
+@import "../../variables.scss";
+
+.service-item {
+  background-color: $gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.2rem;
+  border-radius: 1rem;
+  max-width: 30rem;
+  margin: 0 auto 2.4rem;
+
+  svg {
+    fill: $purple-dark;
+    width: 4rem;
+    height: auto;
+    margin-bottom: 1.6rem;
+  }
+
+  hr {
+    width: 100%;
+    height: 0.3rem;
+    background-color: $purple-dark;
+    border-radius: 0.5rem;
+    border: 0;
+    margin-bottom: 2.4rem;
+  }
+
+  ul {
+    list-style-type: disc;
+
+    li {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  p {
+    margin-bottom: 3.2rem;
+  }
+
+  strong {
+    color: $purple-primary;
+  }
+}

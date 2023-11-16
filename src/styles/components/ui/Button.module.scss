@@ -1,0 +1,25 @@
+@import "../../variables.scss";
+
+.btn-primary {
+  background-color: $purple-primary;
+}
+
+.btn-secondary {
+  border: 0.2rem solid $white;
+}
+
+.btn-mobile-menu-toggler {
+  display: inline-block;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.btn-desktop-cv {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,149 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./variables.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: $purple-primary;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+main {
+  padding-top: 8rem;
+}
+
+section {
+  position: relative;
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-family: var(--font-teko), sans-serif;
+  font-weight: 700;
+  line-height: 125%;
+
+  @media screen and (min-width: 768px) {
+    font-size: 5.6rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 8.8rem;
+  }
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-family: var(--font-teko), sans-serif;
+  font-weight: 700;
+  line-height: 125%;
+  position: relative;
+  margin-bottom: 2.4rem;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 4.8rem;
+    margin-bottom: 4.8rem;
+  }
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-family: var(--font-openSans), sans-serif;
+  font-weight: 400;
+  line-height: 125%;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 3.2rem;
+  }
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-family: var(--font-teko), sans-serif;
+  font-weight: 700;
+  line-height: 125%;
+  margin-bottom: 1.6rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 2.4rem;
+  }
+}
+
+h5 {
+  font-size: 1.6rem;
+  font-family: var(--font-lato), sans-serif;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 2.4rem;
+  }
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-family: var(--font-lato), sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+p,
+ul,
+ol {
+  font-size: 1.6rem;
+  font-family: var(--font-lato), sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+  margin-bottom: 1.6rem;
+}
+
+span {
+  font-size: 1.4rem;
+  font-family: var(--font-merriweather), serif;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+button {
+  font-size: 1.6rem;
+  font-family: var(--font-openSans), sans-serif;
+  font-weight: 700;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  color: $white;
+}
+
+.mobile-flex-col {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+  }
+}

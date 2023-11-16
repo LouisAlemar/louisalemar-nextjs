@@ -1,0 +1,118 @@
+{
+  "id": 1,
+  "data": {
+    "services": [
+      {
+        "serviceId": 1,
+        "name": "Web Design",
+        "description": "Our web design service focuses on creating visually stunning and responsive websites, tailored to embody your brand's identity and ensure an exceptional user experience across all devices.",
+        "keyFeatures": [
+          "<strong>Custom Visual Design:</strong><br /> Matching brand identity",
+          "<strong>Responsive Layouts:</strong><br /> Adapts to all devices",
+          "<strong>User-Friendly Navigation:</strong><br /> For enhanced user experience",
+          "<strong>Visual Elements:</strong><br /> High-quality images and animations",
+          "<strong>Cross-Browser Compatibility:</strong><br /> Consistent look across browsers"
+        ]
+      },
+      {
+        "serviceId": 2,
+        "name": "Web Development",
+        "description": "We provide comprehensive web development solutions, encompassing both front-end and back-end programming, aimed at building secure, high-performing, and SEO-optimized websites.",
+        "keyFeatures": [
+          "<strong>Front-End & Back-End:</strong><br /> Building and managing website functions",
+          "<strong>Performance Optimization:</strong><br /> Fast loading times",
+          "<strong>Enhanced Security:</strong><br /> Protecting against cyber threats",
+          "<strong>SEO Optimized:</strong><br /> Better search engine ranking",
+          "<strong>Technical Maintenance:</strong><br /> Regular updates and fixes"
+        ]
+      },
+      {
+        "serviceId": 3,
+        "name": "Content Creation",
+        "description": "Our content creation expertise spans across crafting SEO-friendly, engaging, and diverse multimedia content, strategically designed to amplify your brand's voice and presence online.",
+        "keyFeatures": [
+          "<strong>SEO-Friendly Writing:</strong><br /> For better online visibility",
+          "<strong>Diverse Media Formats:</strong><br /> Blogs, videos, infographics",
+          "<strong>Brand Voice Alignment:</strong><br /> Consistent messaging",
+          "<strong>Social Media Adaptation:</strong><br /> Platform-specific content",
+          "<strong>Content Strategy Planning:</strong><br /> Regular and strategic posting"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "projectId": 1,
+        "name": "Salesforce Stakeholder Impact Report",
+        "description": "A yearly report for Stakeholders.",
+        "url": "https://stakeholderimpactreport.salesforce.com/",
+        "logo": "salesforce-logo.png",
+        "bgImage": "salesforce-bg.jpg",
+        "technologies": ["Javascript", "React", "Wordpress"]
+      },
+      {
+        "projectId": 3,
+        "name": "Noddle Companies",
+        "description": "The Noddle Companies is a full service strategic development partner which can provide their clients with assistance in site selection, acquisition master planning, architect and contractor selections and contract negotiation, zoning, infrastructure installation, tax incentives, construction management and more.",
+        "url": "https://www.noddlecompanies.com/",
+        "logo": "noddle-logo.jpeg",
+        "bgImage": "noddle-bg.jpg"
+      },
+      {
+        "projectId": 4,
+        "name": "Iannelli Construction",
+        "description": "An informational website for a construction company.",
+        "url": "http://www.iannelliconstruction.com/",
+        "logo": "iannelli-logo.png",
+        "bgImage": "iannelli-bg.jpg"
+      }
+    ],
+    "testimonials": [
+      {
+        "testimonialId": 1,
+        "name": "Wally Faye",
+        "jobTitle": "Staff Architect",
+        "company": "Hype",
+        "image": "wally.jpeg",
+        "text": "In the several years that I have had the pleasure of overseeing and mentoring Louis, he has consistently displayed an exceptional caliber of work as a JavaScript software engineer. His meticulous attention to detail is evident in the precision of his code and the scrupulous manner with which he troubleshoots and resolves complex problems. Louis' commitment to collaboration fosters a synergistic environment where each project benefits from his keen ability to harmonize with a team. His thirst for knowledge and improvement is insatiable, always seeking out new technologies and practices with a fervor that is both inspiring and infectious. His contributions are not only a testament to his skills but also to his unwavering dedication to excellence in the evolving landscape of software development."
+      },
+      {
+        "testimonialId": 2,
+        "name": "Charles Julian Jr.",
+        "jobTitle": "Senior Front-End Web Developer",
+        "company": "Launch Interactive",
+        "image": "charles.jpeg",
+        "text": "I have worked with Louis at two different companies. Louis is a very hard-working developer that can take a project from concept to completion with very little if any assitance. Louis is well skilled in React and Javascript as well as Typescript and can handle any challenges that may come his way. He is a great asset to have on any team because of his hard work and determination to get the job done quickly and efficiently."
+      }
+    ],
+    "tech": [
+      {
+        "type": "Languages",
+        "technology": ["HTML5", "CSS3", "JavaScript", "Typescript", "PHP"]
+      },
+      {
+        "type": "Front-End",
+        "technology": ["React", "Redux", "Redux-Toolkit", "jQuery", "AJAX"]
+      },
+      {
+        "type": "Back-End",
+        "technology": ["Node.js", "Express", "Sequelize"]
+      },
+      {
+        "type": "Databases",
+        "technology": ["MySQL"]
+      },
+      {
+        "type": "Styling",
+        "technology": ["SASS", "LESS", "Tailwind CSS"]
+      },
+      {
+        "type": "Tools",
+        "technology": ["Webpack", "Docker"]
+      },
+      {
+        "type": "Other",
+        "technology": ["GraphQL", "Wordpress", "Next.js"]
+      }
+    ]
+  }
+}

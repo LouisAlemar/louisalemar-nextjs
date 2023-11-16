@@ -1,0 +1,15 @@
+@import "../../variables.scss";
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  height: 10rem;
+  width: 10rem;
+  display: inline-block;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 1;
+}

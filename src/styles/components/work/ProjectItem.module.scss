@@ -1,0 +1,85 @@
+@import "../../variables.scss";
+
+.project-item {
+  position: relative;
+  border-radius: 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+    .project-item-logo {
+      opacity: 0;
+    }
+    .project-item-text {
+      opacity: 1;
+    }
+  }
+
+  button {
+    &:hover {
+      background-color: $purple-primary;
+      border-color: $purple-primary;
+    }
+  }
+}
+
+.project-item-bg-image {
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.project-item-logo {
+  position: absolute;
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 0.5s ease;
+}
+
+.project-item-text {
+  z-index: 2;
+  position: relative;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  transition: opacity 0.5s ease;
+  padding: 4rem 2rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 4rem;
+  }
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  border-radius: 0.5rem;
+}
