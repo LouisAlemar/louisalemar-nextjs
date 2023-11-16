@@ -10,6 +10,7 @@ import { AppDispatch } from '@/store/store';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styles/global.scss';
+import About from '@/components/about-section';
 
 
 
@@ -24,6 +25,7 @@ export default function Home() {
     <main>
       <Header />
       <Services />
+      <About />
 
     </main>
     // <motion.div

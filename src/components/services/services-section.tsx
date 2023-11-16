@@ -13,8 +13,8 @@ const ServicesSection = () => {
   const error = useSelector((state: RootState) => state.data.error);
 
   return (
-    <section className={styles.services}>
-      <Circle />
+    <section className={styles['services-section']}>
+      <Circle color='purple' topPosition='-5rem' />
       <div className="container">
         <div className={styles['services-header']}>
           <h2>Services</h2>

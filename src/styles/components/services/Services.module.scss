@@ -1,8 +1,8 @@
 @import "../../variables.scss";
 
-.services {
+.services-section {
   background-color: $white;
-  padding: 7.2rem 0rem;
+  padding: 7.2rem 0rem 8rem;
   border-radius: 5rem;
   transform: translateY(-6rem);
 
@@ -23,7 +23,7 @@
   }
 
   button {
-    margin: 0 auto;
+    margin: 2rem auto 0;
     position: relative;
     display: block;
   }
