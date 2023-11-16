@@ -5,11 +5,12 @@ import {
   createSlice
 } from "@reduxjs/toolkit";
 
-import { Service, Project } from "@/app/api/interfaces/index";
+import { Service, Project, Testimonial } from "@/app/api/interfaces/index";
 
 interface AllData {
   services: Service[];
-  projects: Project[]
+  projects: Project[];
+  testimonials: Testimonial[];
 }
 
 interface DataState {
@@ -20,7 +21,8 @@ interface DataState {
 
 const initialAllData: AllData = {
   services: [],
-  projects: []
+  projects: [],
+  testimonials: [],
 };
 
 const initialState: DataState = {

@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import ServiceIcon from './service-icon';
 
 import styles from '../../styles/components/services/ServiceItem.module.scss'

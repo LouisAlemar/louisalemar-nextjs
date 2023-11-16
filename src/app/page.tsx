@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux';
 import '../styles/global.scss';
 import About from '@/components/about-section';
 import WorkSection from '@/components/work/work-section';
+import TestimonialsSection from '@/components/testimonials/testimonials-section';
 
 
 
@@ -28,6 +29,7 @@ export default function Home() {
       <Services />
       <About />
       <WorkSection />
+      <TestimonialsSection />
 
     </main>
     // <motion.div

@@ -22,6 +22,15 @@ export type Project = {
   technologies: string[];
 };
 
+export type Testimonial = {
+  testimonialId: number;
+  name: string;
+  jobTitle: string;
+  company: string;
+  image: string;
+  text: string;
+}
+
 export type Tech = {
   type: string;
   technology: string[];
