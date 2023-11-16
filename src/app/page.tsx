@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styles/global.scss';
 import About from '@/components/about-section';
+import WorkSection from '@/components/work/work-section';
 
 
 
@@ -26,6 +27,7 @@ export default function Home() {
       <Header />
       <Services />
       <About />
+      <WorkSection />
 
     </main>
     // <motion.div

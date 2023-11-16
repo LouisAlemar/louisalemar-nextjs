@@ -1,0 +1,42 @@
+@import "../../variables.scss";
+
+.work-section {
+  background-color: $purple-primary;
+  border-radius: 5rem;
+  padding: 7.2rem 0rem;
+  transform: translateY(-26rem);
+
+  @media screen and (min-width: 768px) {
+    transform: translateY(-37rem);
+  }
+
+  h2 {
+    color: $white;
+
+    &:after {
+      border-bottom: 0.4rem solid $purple-dark;
+    }
+  }
+
+  h4 {
+    color: $white;
+    text-align: center;
+  }
+
+  p {
+    color: $white;
+    margin: 0 auto 3.2rem;
+    max-width: 62rem;
+  }
+
+  button {
+    margin: 4.2rem auto 0;
+    position: relative;
+    display: block;
+  }
+}
+
+.work-header {
+  display: flex;
+  justify-content: center;
+}

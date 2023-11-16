@@ -17,7 +17,8 @@ export type Project = {
   name: string;
   description: string;
   url: string;
-  image: string;
+  logo: string;
+  bgImage: string;
   technologies: string[];
 };
 

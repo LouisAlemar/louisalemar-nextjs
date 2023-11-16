@@ -10,12 +10,6 @@ interface ServiceItemProps {
   keyFeatures: string[]
 }
 
-const icons = {
-  'web-design.svg': '/images/web-design.svg',
-  'web-development.svg': '/images/web-development.svg',
-  'content-creation.svg': '/images/content-creation.svg'
-}
-
 const ServiceItem: React.FC<ServiceItemProps> = ({ name, description, keyFeatures }) => {
   const altText = `An icon for ${name} service.`;
 

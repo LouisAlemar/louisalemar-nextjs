@@ -2,7 +2,6 @@ import Image from "next/image"
 import Circle from "./ui/circle"
 import AboutMeImg from '../images/about-me-image.jpg'
 import styles from '../styles/components/About.module.scss'
-import Button from "./ui/button"
 
 
 const About = () => {
