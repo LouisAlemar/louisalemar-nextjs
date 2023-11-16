@@ -19,7 +19,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ name, description, keyFeature
       <p>{description}</p>
       <hr />
       <ul>
-        {keyFeatures.map((feature, index) => <li key={index}>{feature}</li>)}
+        {keyFeatures.map((feature, index) => <li key={index} dangerouslySetInnerHTML={{ __html: feature }} />)}
       </ul>
     </div>
   )

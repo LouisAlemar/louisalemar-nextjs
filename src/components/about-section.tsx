@@ -6,7 +6,7 @@ import styles from '../styles/components/About.module.scss'
 
 const About = () => {
   return (
-    <section className={styles['about-section']}>
+    <section id="about" className={styles['about-section']}>
       <Circle color="white" topPosition={"4rem"} />
       <div className="container">
         <div className={styles['about-header']}>
@@ -23,7 +23,7 @@ const About = () => {
             />
           </div>
           <div className={styles['about-text']}>
-            <p>Eu viverra integer dolor feugiat. In phasellus dictum cursus non. Non nibh quam a fermentum interdum. Non sed quisque magna in. Feugiat velit morbi porttitor sit enim ipsum accumsan vel felis. Volutpat et varius magnis in. Massa amet nisi vulputate nunc maecenas auctor in etiam. Nec sagittis faucibus facilisi velit vel. Aliquam sed vitae molestie velit ac enim tempor aliquam turpis. Leo ornare tellus sagittis sed at sodales tempor. Et tincidunt semper diam est viverra. Risus enim faucibus adipiscing odio at orci tellus sodales eu. Sed egestas pulvinar pretium commodo arcu in posuere quis. Pulvinar enim semper eu enim. Pulvinar risus at integer egestas elementum.</p>
+            <p>I am Louis Alemar, a highly skilled Front-End Developer with a robust portfolio in web development. My expertise lies in a broad spectrum of web development technologies, with a particular focus on front-end frameworks like React, Redux, and Next.js, alongside back-end development skills in Node.js, Express, and Sequelize. Throughout my career at renowned companies such as Launch Interactive, Trusted Media Brands, Access Intelligence, and The Berman Group, I have honed my abilities in creating engaging website features, developing custom WordPress plugins for enhanced site functionality, and leading major development projects. My collaborative efforts with design and backend teams have been instrumental in transforming intricate web designs into efficient React user interfaces. My dedication to crafting compelling user experiences and my comprehensive approach to web development are the hallmarks of my professional journey.</p>
           </div>
         </div>
       </div>

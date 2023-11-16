@@ -12,13 +12,13 @@ const WorkSection = () => {
   const error = useSelector((state: RootState) => state.data.error);
 
   return (
-    <section className={styles['work-section']}>
+    <section id="work" className={styles['work-section']}>
       <Circle color="gray" topPosition={"-5rem"} />
       <div className="container">
         <div className={styles['work-header']}>
           <h2>My Work</h2>
         </div>
-        <p>Eu viverra integer dolor feugiat. In phasellus dictum cursus non. Non nibh quam a fermentum interdum. Non sed quisque magna in.</p>
+        <p>Welcome to my digital portfolio, a showcase of innovative web development projects that blend creativity and technical expertise.</p>
         <div className={`grid grid-cols-1 lg:grid-cols-3 gap-7 ${styles['project-listing-container']}`}>
           {loading && <p>Loading...</p>}
           {error && <p>Error!</p>}
@@ -26,7 +26,7 @@ const WorkSection = () => {
             return <ProjectItem key={project.projectId} {...project} />
           })}
         </div>
-        <Button isPrimary={false}>Start Consulting</Button>
+        <Button href="mailto:louisalemar@gmail.com?subject=Requesting%20more%20information%20about%20your%20services!" isPrimary={false}>Start Consulting</Button>
       </div>
     </section>
   )

@@ -28,7 +28,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, description, logo, bgIm
       <div className={styles['project-item-text']}>
         <h4>{name}</h4>
         <p>{description}</p>
-        <Button isPrimary={false}>View Project</Button>
+        <Button href={url} isPrimary={false}>View Project</Button>
       </div>
     </div>
   )

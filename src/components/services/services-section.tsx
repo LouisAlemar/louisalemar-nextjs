@@ -13,7 +13,7 @@ const ServicesSection = () => {
   const error = useSelector((state: RootState) => state.data.error);
 
   return (
-    <section className={styles['services-section']}>
+    <section id="services" className={styles['services-section']}>
       <Circle color='purple' topPosition='-5rem' />
       <div className="container">
         <div className={styles['services-header']}>
@@ -26,7 +26,7 @@ const ServicesSection = () => {
             return <ServiceItem key={service.serviceId} name={service.name} description={service.description} keyFeatures={service.keyFeatures} />
           })}
         </div>
-        <Button>Start Consulting</Button>
+        <Button href="mailto:louisalemar@gmail.com?subject=Requesting%20more%20information%20about%20your%20services!">Start Consulting</Button>
       </div>
     </section>
   )

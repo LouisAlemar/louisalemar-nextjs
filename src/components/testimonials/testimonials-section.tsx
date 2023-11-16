@@ -11,13 +11,13 @@ const TestimonialsSection = () => {
   const error = useSelector((state: RootState) => state.data.error);
 
   return (
-    <section className={styles['testimonials-section']}>
+    <section id="testimonials" className={styles['testimonials-section']}>
       <Circle color='purple' topPosition='0rem' />
       <div className="container">
         <div className={styles['testimonials-header']}>
           <h2>Testimonials</h2>
         </div>
-        <p className={styles['section-description']}>Eu viverra integer dolor feugiat. In phasellus dictum cursus non. Non nibh quam a fermentum interdum. Non sed quisque magna in.</p>
+        <p className={styles['section-description']}>Discover what others are saying: Browse through genuine testimonials from clients and colleagues who have experienced the quality and impact of my work.</p>
         <div className={`grid grid-cols-1 ${styles['testimonial-listing']}`}>
           {loading && <p>Loading...</p>}
           {error && <p>Error!</p>}

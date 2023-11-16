@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 import Image from 'next/image'
 
 import logo from '../images/web-programming.png'
@@ -26,13 +26,13 @@ export default function Nav() {
             height={48}
           />
           <ul className={`${styles['nav-items']} ${styles['desktop-nav-items']}`}>
-            <li>Services</li>
-            <li>About</li>
-            <li>Work</li>
-            <li>Testimonials</li>
-            <li>Contact</li>
+            <li><Link href="#services">Services</Link></li>
+            <li><Link href="#about">About</Link></li>
+            <li><Link href="#work">Work</Link></li>
+            <li><Link href="#testimonials">Testimonials</Link></li>
+            <li><Link href="#contact">Contact</Link></li>
           </ul>
-          <Button isDownloadCv={true} isPrimary={false}>Download CV</Button>
+          <Button href="/pdf/Louis_Alemar_Resume.pdf" download={true} isDownloadCv={true} isPrimary={false}>Download CV</Button>
           <Button isPrimary={false} isMobileMenuToggler={true} clickFunc={toggleMobileMenuHandler} className="space-y-2">
             <span className={`${styles['hamburger-line']} block h-2 w-10`}></span>
             <span className={`${styles['hamburger-line']} block h-2 w-10`}></span>
@@ -45,13 +45,13 @@ export default function Nav() {
         <div className={`container flex-col ${styles['nav-container']}`}>
           <div>
             <ul className={`${styles['nav-items']} ${styles['mobile-nav-items']}`}>
-              <li>Services</li>
-              <li>About</li>
-              <li>Work</li>
-              <li>Testimonials</li>
-              <li>Contact</li>
+              <li><Link href="#services">Services</Link></li>
+              <li><Link href="#about">About</Link></li>
+              <li><Link href="#work">Work</Link></li>
+              <li><Link href="#testimonials">Testimonials</Link></li>
+              <li><Link href="#contact">Contact</Link></li>
             </ul>
-            <Button isPrimary={false}>Download CV</Button>
+            <Button href="/pdf/Louis_Alemar_Resume.pdf" download={true} isPrimary={false}>Download CV</Button>
           </div>
         </div>
       </nav>
