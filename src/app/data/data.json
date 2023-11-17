@@ -82,6 +82,14 @@
         "company": "Launch Interactive",
         "image": "charles.jpeg",
         "text": "I have worked with Louis at two different companies. Louis is a very hard-working developer that can take a project from concept to completion with very little if any assitance. Louis is well skilled in React and Javascript as well as Typescript and can handle any challenges that may come his way. He is a great asset to have on any team because of his hard work and determination to get the job done quickly and efficiently."
+      },
+      {
+        "testimonialId": 3,
+        "name": "Adam Scott",
+        "jobTitle": "Technology Director",
+        "company": "Launch Interactive",
+        "image": "adam.jpeg",
+        "text": "Louis, during his time at Launch, proved to be a talented UI Developer. His work on projects for clients including Salesforce, Splunk, Grammarly and Royal Oak showcased his ability to blend technical skill with a unique design sense. A team player, Louis balanced independence with effective communication and a positive attitude. His growth in both scripting and visual design was notable. I confidently recommend Louis for his professionalism, creativity, and strong work ethic."
       }
     ],
     "tech": [
