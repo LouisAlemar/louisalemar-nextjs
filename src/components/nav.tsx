@@ -18,13 +18,15 @@ export default function Nav() {
     <>
       <nav className={`${styles.nav} ${styles['desktop-nav']}`}>
         <div className={`container ${styles['nav-container']}`}>
-          <Image
-            className={styles.logo}
-            src={logo}
-            alt="Louis Alemar logo"
-            width={48}
-            height={48}
-          />
+          <Link href="/">
+            <Image
+              className={styles.logo}
+              src={logo}
+              alt="Louis Alemar logo"
+              width={48}
+              height={48}
+            />
+          </Link>
           <ul className={`${styles['nav-items']} ${styles['desktop-nav-items']}`}>
             <li><Link href="#services">Services</Link></li>
             <li><Link href="#about">About</Link></li>
@@ -41,10 +43,10 @@ export default function Nav() {
         </div>
       </nav>
 
-      <nav className={`${styles.nav} ${styles['mobile-nav']} ${toggleMobileMenu && styles['show-mobile-nav']}`}>
+      <nav className={`${styles.nav} ${styles['mobile-nav']} ${toggleMobileMenu ? styles['show-mobile-nav'] : ''}`}>
         <div className={`container flex-col ${styles['nav-container']}`}>
           <div>
-            <ul className={`${styles['nav-items']} ${styles['mobile-nav-items']}`}>
+            <ul onClick={toggleMobileMenuHandler} className={`${styles['nav-items']} ${styles['mobile-nav-items']}`}>
               <li><Link href="#services">Services</Link></li>
               <li><Link href="#about">About</Link></li>
               <li><Link href="#work">Work</Link></li>
