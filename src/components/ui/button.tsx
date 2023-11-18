@@ -1,6 +1,7 @@
 import styles from '../../styles/components/ui/Button.module.scss';
 
 interface ButtonProps {
+  id?: string;
   children: any;
   href?: string;
   isPrimary?: boolean;
@@ -11,7 +12,7 @@ interface ButtonProps {
   className?: string
 }
 
-const Button: React.FC<ButtonProps> = ({ children, href, isPrimary = true, clickFunc, isMobileMenuToggler = false, isDownloadCv = false, download = false, className }) => {
+const Button: React.FC<ButtonProps> = ({ id, children, href, isPrimary = true, clickFunc, isMobileMenuToggler = false, isDownloadCv = false, download = false, className }) => {
   const buttonClass = `
     ${isPrimary ? styles['btn-primary'] : styles['btn-secondary']} 
     ${isMobileMenuToggler ? styles['btn-mobile-menu-toggler'] : ''}
@@ -20,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({ children, href, isPrimary = true, click
   `;
 
   return (
-    <button className={buttonClass} onClick={clickFunc}>
+    <button id={id} className={buttonClass} onClick={clickFunc}>
       {download && href &&
         <a href={href} target='_blank' download>
           {children}

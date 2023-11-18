@@ -35,7 +35,7 @@ export default function Nav() {
             <li><Link href="#contact">Contact</Link></li>
           </ul>
           <Button href="/pdf/Louis_Alemar_Resume.pdf" download={true} isDownloadCv={true} isPrimary={false}>Download CV</Button>
-          <Button isPrimary={false} isMobileMenuToggler={true} clickFunc={toggleMobileMenuHandler} className={`space-y-2 ${styles['hamburger-btn']} ${toggleMobileMenu ? styles.active : ''}`}>
+          <Button id={styles['hamburger-btn-id']} isPrimary={false} isMobileMenuToggler={true} clickFunc={toggleMobileMenuHandler} className={`space-y-2 ${styles['hamburger-btn']} ${toggleMobileMenu ? styles.active : ''}`}>
             <span></span>
             <span></span>
             <span></span>
