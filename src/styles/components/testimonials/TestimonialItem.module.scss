@@ -2,13 +2,14 @@
 
 .testimonial-item {
   position: relative;
-  margin-bottom: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 80rem;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 8rem;
+    margin: 0 auto 8rem;
   }
 }
 
