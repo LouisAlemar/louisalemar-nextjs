@@ -23,14 +23,14 @@ export default function Home() {
     <>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`}></Script>
+        src="https://www.googletagmanager.com/gtag/js?id=G-P8F5G2HMX7"></Script>
 
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${process.env.GA_ID}');
+          gtag('config', 'G-P8F5G2HMX7');
         `}
       </Script>
       <main>
