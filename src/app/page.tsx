@@ -1,7 +1,6 @@
 "use client";
 import About from '@/components/about-section';
 import Contact from '@/components/contact';
-import GoogleAnalytics from '@/components/google-analytics';
 import Header from '@/components/header';
 import Services from '@/components/services/services-section';
 import TestimonialsSection from '@/components/testimonials/testimonials-section';
@@ -11,6 +10,7 @@ import { AppDispatch } from '@/store/store';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styles/global.scss';
+import Script from 'next/script';
 
 export default function Home() {
   const dispatch = useDispatch<AppDispatch>();
@@ -20,14 +20,27 @@ export default function Home() {
   }, [dispatch]);
 
   return (
-    <main>
-      <GoogleAnalytics />
-      <Header />
-      <Services />
-      <About />
-      <WorkSection />
-      <TestimonialsSection />
-      <Contact />
-    </main>
+    <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`}></Script>
+
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.GA_ID}');
+        `}
+      </Script>
+      <main>
+        <Header />
+        <Services />
+        <About />
+        <WorkSection />
+        <TestimonialsSection />
+        <Contact />
+      </main>
+    </>
   );
 }
