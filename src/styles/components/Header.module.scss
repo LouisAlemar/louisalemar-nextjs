@@ -31,8 +31,9 @@
   width: 1rem;
   background-color: $green;
   display: inline-block;
-  border-radius: 100%;
+  border-radius: 50%;
   margin-right: 0.8rem;
+  animation: pulse 1s infinite;
 }
 
 .header-text {
@@ -84,5 +85,19 @@
 
   @media screen and (min-width: 768px) {
     order: 2;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
