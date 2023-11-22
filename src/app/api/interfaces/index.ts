@@ -1,11 +1,5 @@
-export interface AllData {
-  services: Service[],
-  projects: Project[],
-  tech: Tech[]
-}
-
 export type Service = {
-  serviceId: number;
+  id: number;
   name: string;
   description: string
   icon: string;
@@ -13,7 +7,7 @@ export type Service = {
 }
 
 export type Project = {
-  projectId: number;
+  id: number;
   name: string;
   description: string;
   url: string;
@@ -23,16 +17,11 @@ export type Project = {
 };
 
 export type Testimonial = {
-  testimonialId: number;
+  id: number;
   name: string;
   jobTitle: string;
   company: string;
   image: string;
   text: string;
 }
-
-export type Tech = {
-  type: string;
-  technology: string[];
-};
 

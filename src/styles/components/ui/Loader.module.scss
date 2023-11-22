@@ -1,0 +1,24 @@
+@import "../../variables.scss";
+
+.loader {
+  display: flex;
+  text-align: center;
+  height: 10rem;
+}
+
+.spinner {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: auto;
+  border: 0.4rem solid $purple-dark;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: spinny 0.5s infinite linear;
+}
+
+@keyframes spinny {
+  100% {
+    transform: rotate(360deg);
+  }
+}

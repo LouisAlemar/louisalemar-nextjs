@@ -1,23 +1,13 @@
-import * as fs from "fs";
-import * as util from "node:util";
-import * as path from "node:path";
-// import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 
-// const prisma = new PrismaClient();
+const prisma = new PrismaClient();
 
 export async function GET(request: Request) {
-  // const posts = await prisma.post.findMany({
-  //   where: { published: true }
-  // })
+  const services = await prisma.service.findMany()
+  const projects = await prisma.project.findMany()
+  const testimonials = await prisma.testimonial.findMany()
 
-  const readFile = util.promisify(fs.readFile);
+  const allData = { services, projects, testimonials }
 
-  const pathToFile = path.resolve(
-    __dirname,
-    "../../../../src/app/data/data.json"
-  );
-
-  const projectsData = await readFile(pathToFile, "utf8");
-
-  return new Response(projectsData);
+  return new Response(JSON.stringify(allData));
 }

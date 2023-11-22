@@ -1,12 +1,17 @@
 "use client";
 
 import { configureStore } from "@reduxjs/toolkit";
-import dataReducer from './all-data-slice';
+import servicesReducer from './features/services/servicesSlice';
+import testimonialsReducer from './features/testimonials/testimonialsSlice';
+import workReducer from './features/work/workSlice';
 
 export const store = configureStore({
   reducer: {
-    data: dataReducer,
+    services: servicesReducer,
+    work: workReducer,
+    testimonials: testimonialsReducer,
   }
 });
+
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
