@@ -24,7 +24,6 @@ export const getTestimonials = createAsyncThunk(
   async () => {
     const response = await fetch('/api/testimonials/')
     const data = await response.json()
-    console.log(data)
 
     return data
   }

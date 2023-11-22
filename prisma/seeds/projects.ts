@@ -1,8 +1,10 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, type Project } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-const projects = [
+type ProjectSeed = Omit<Project, "id">
+
+const projects: ProjectSeed[] = [
   {
     name: "Salesforce Stakeholder Impact Report",
     description: "A yearly report for Stakeholders.",

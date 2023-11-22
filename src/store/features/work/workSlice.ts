@@ -24,7 +24,6 @@ export const getWork = createAsyncThunk(
   async () => {
     const response = await fetch('/api/work/')
     const data = await response.json()
-    console.log(data)
 
     return data
   }
