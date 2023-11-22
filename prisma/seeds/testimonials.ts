@@ -1,8 +1,10 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, type Testimonial } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-const testimonials = [
+type TestimonialSeed = Omit<Testimonial, "id">
+
+const testimonials: TestimonialSeed[] = [
   {
     name: "Wally Faye",
     jobTitle: "Staff Architect",

@@ -1,8 +1,10 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, type Service } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-const services = [
+type ServiceSeed = Omit<Service, "id">
+
+const services: ServiceSeed[] = [
   {
 
     name: "Web Design",
