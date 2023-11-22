@@ -1,6 +1,6 @@
 import ServiceIcon from './service-icon';
 
-import styles from '../../styles/components/services/ServiceItem.module.scss'
+import styles from '../../styles/components/services/ServiceItem.module.scss';
 
 interface ServiceItemProps {
   name: string;

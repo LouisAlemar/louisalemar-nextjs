@@ -5,18 +5,22 @@ import Header from '@/components/header';
 import Services from '@/components/services/services-section';
 import TestimonialsSection from '@/components/testimonials/testimonials-section';
 import WorkSection from '@/components/work/work-section';
-import { fetchData } from '@/store/all-data-slice';
+import { getServices } from '@/store/features/services/servicesSlice';
+import { getTestimonials } from '@/store/features/testimonials/testimonialsSlice';
+import { getWork } from '@/store/features/work/workSlice';
 import { AppDispatch } from '@/store/store';
+import Script from 'next/script';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styles/global.scss';
-import Script from 'next/script';
 
 export default function Home() {
   const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    dispatch(fetchData());
+    dispatch(getServices());
+    dispatch(getWork());
+    dispatch(getTestimonials());
   }, [dispatch]);
 
   return (
