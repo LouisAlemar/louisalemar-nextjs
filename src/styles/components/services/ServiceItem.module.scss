@@ -9,6 +9,11 @@
   border-radius: 1rem;
   max-width: 30rem;
   margin: 0 auto 2.4rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   svg {
     fill: $purple-dark;
