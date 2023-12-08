@@ -1,5 +1,6 @@
 # Allow all crawlers
 User-agent: *
 Allow: /
+Disallow: /projects
 
 Sitemap: https://www.louisalemar.com/sitemap.xml
