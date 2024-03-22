@@ -34,7 +34,7 @@ export default function Nav() {
             <li><Link href="#testimonials">Testimonials</Link></li>
             <li><Link href="#contact">Contact</Link></li>
           </ul>
-          <Button href="/pdf/Louis_Alemar_Resume.pdf" download={true} isDownloadCv={true} isPrimary={false}>Download CV</Button>
+          <Button href="/pdf/Louis_Alemar_Resume.pdf" isDownloadCv={true} isPrimary={false}>Download CV</Button>
           <Button id={styles['hamburger-btn-id']} isPrimary={false} isMobileMenuToggler={true} clickFunc={toggleMobileMenuHandler} className={`space-y-2 ${styles['hamburger-btn']} ${toggleMobileMenu ? styles.active : ''}`}>
             <span></span>
             <span></span>
@@ -53,7 +53,7 @@ export default function Nav() {
               <li><Link href="#testimonials">Testimonials</Link></li>
               <li><Link href="#contact">Contact</Link></li>
             </ul>
-            <Button href="/pdf/Louis_Alemar_Resume.pdf" download={true} isPrimary={false}>Download CV</Button>
+            <Button href="/pdf/Louis_Alemar_Resume.pdf" isPrimary={false}>Download CV</Button>
           </div>
         </div>
       </nav>
